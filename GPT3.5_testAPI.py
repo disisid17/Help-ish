@@ -1,6 +1,6 @@
 import os
 import openai
-openai.api_key = "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"
+openai.api_key = "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" #remove key when uploading to github
 
 
 
