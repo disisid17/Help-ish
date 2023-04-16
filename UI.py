@@ -1,9 +1,9 @@
 import tkinter as tk
 import tkinter.font as tkFont
 
-from Test1 import Chatbot # This import statement WORKS
+from Chatbot import Chatbot # This import statement WORKS
 
-# We were unable to finish the UI, but the Chatbot class from Test1.py successfully implements 
+# We were unable to finish the UI, but the Chatbot class from Chatbot.py successfully implements 
 # the ChatGPT API to respond in various degrees of helpfulness.
 
 class App:
@@ -51,7 +51,7 @@ class App:
 
     def GButton_268_command(self): # when the button is pressed
         #Chatbot.question = self.GLineEdit_287["text"] # get the text from the entry box
-    #    print(Test1.question)
+    #    print(Chatbot.question)
         #entry = GLineEdit_287.get()
         #print(entry)
         
