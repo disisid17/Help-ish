@@ -2,6 +2,8 @@ import os
 import openai
 openai.api_key = ""
 
+# This Chatbot class from Test1.py successfully implements 
+# the ChatGPT API to respond in varying degrees of helpfulness.
 class Chatbot:
   result = "temp"
 
