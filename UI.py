@@ -1,7 +1,8 @@
 import tkinter as tk
 import tkinter.font as tkFont
 
-#import Test1.py
+from Test1 import Chatbot # This import statement WORKS
+
 
 class App:
     def __init__(self, root):
@@ -32,7 +33,7 @@ class App:
         GMessage_350["font"] = ft
         GMessage_350["fg"] = "#000000"
         GMessage_350["justify"] = "left"
-        GMessage_350["text"] = "poop"
+        GMessage_350["text"] = " "
         GMessage_350.place(x=20,y=30,width=540,height=408)
 
         # Enter Button
@@ -47,13 +48,20 @@ class App:
         GButton_268["command"] = self.GButton_268_command
 
     def GButton_268_command(self): # when the button is pressed
-    #    Test1.question = GLineEdit_287["text"] # get the text from the entry box
+        Test1.question = self.GLineEdit_287["text"] # get the text from the entry box
     #    print(Test1.question)
-        entry = GLineEdit_287.get()
-        print(entry)
+        #entry = GLineEdit_287.get()
+        #print(entry)
+        
         print("command")
         #self.GMessage_350["text"] = "command"
-        GMessage_350["text"] = "command"
+        #GMessage_350["text"] = "command"
+
+        label = tk.Label(root, text= "Message recieved", anchor="s", justify="left")
+        #label = tk.Entry(GMessage_350, text= "Message recieved", anchor="s", justify="left")
+        #this creates a new label to the GUI
+        label.pack() 
+
 
 if __name__ == "__main__":
     root = tk.Tk()
