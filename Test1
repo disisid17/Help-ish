@@ -1,6 +1,6 @@
 import os
 import openai
-openai.api_key = ""
+openai.api_key = "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"
 
 
 result = "temp"
@@ -22,6 +22,13 @@ elif level == "3":
 
 elif level !="1" and level !="2" and level !="3":
   result = "Repeat this statement exactly as follows: That is not a valid response!"
+
+if rude == "yes":
+  result = result + "In addition, make the response rude"
+elif rude == "no":
+  result = result
+elif rude !="no" and rude !="yes":
+  result = "Repeat this statment as follows: YOU MADE AN INVALID RESPONSE"
 
 
 completion = openai.ChatCompletion.create(
