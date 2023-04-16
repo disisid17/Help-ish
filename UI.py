@@ -1,6 +1,8 @@
 import tkinter as tk
 import tkinter.font as tkFont
 
+#import Test1.py
+
 class App:
     def __init__(self, root):
         #setting title
@@ -30,7 +32,7 @@ class App:
         GMessage_350["font"] = ft
         GMessage_350["fg"] = "#000000"
         GMessage_350["justify"] = "left"
-        GMessage_350["text"] = ""
+        GMessage_350["text"] = "poop"
         GMessage_350.place(x=20,y=30,width=540,height=408)
 
         # Enter Button
@@ -45,8 +47,13 @@ class App:
         GButton_268["command"] = self.GButton_268_command
 
     def GButton_268_command(self): # when the button is pressed
+    #    Test1.question = GLineEdit_287["text"] # get the text from the entry box
+    #    print(Test1.question)
+        entry = GLineEdit_287.get()
+        print(entry)
         print("command")
-        
+        #self.GMessage_350["text"] = "command"
+        GMessage_350["text"] = "command"
 
 if __name__ == "__main__":
     root = tk.Tk()
